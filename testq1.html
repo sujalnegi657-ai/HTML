@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Pricing Table</title>
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --bg-color: #f8f9fa;
+            --table-bg: #ffffff;
+            --border-color: #dee2e6;
+            --header-bg: #f1f3f5;
+            --pro-plan-bg: #e9f5ff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 40px 20px;
+            color: #343a40;
+            line-height: 1.6;
+        }
+
+        
+        
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 16px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        
+
+        
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .price-note {
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+        }
+
+        .feature-check {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .main-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            padding: 24px;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr {
+                border: 1px solid var(--border-color);
+                margin-bottom: 20px;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            
+            td {
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+                text-align: right;
+            }
+
+            td:before {
+                position: absolute;
+                left: 10px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: 600;
+                content: attr(data-label);
+            }
+
+            td:first-child {
+                background-color: var(--primary-color);
+                color: white;
+                text-align: center;
+                padding-left: 20px;
+                font-size: 1.2rem;
+            }
+            td:first-child::before {
+                content: "";
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="pricing-table-container">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4" class="main-title">Choose Your Plan</th>
+            </tr>
+            <tr>
+                <th>Features</th>
+                <th>Basic</th>
+                <th class="plan-pro">Pro</th>
+                <th>Enterprise</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+            <tr>
+                <td data-label="Feature">Users</td>
+                <td data-label="Basic">1 User</td>
+                <td data-label="Pro" class="plan-pro">5 Users</td>
+                <td data-label="Enterprise">Unlimited Users</td>
+            </tr>
+            <tr>
+                <td data-label="Feature" rowspan="2">Storage</td>
+                <td data-label="Basic">10 GB Cloud Storage</td>
+                <td data-label="Pro" class="plan-pro">100 GB Cloud Storage</td>
+                <td data-label="Enterprise">1 TB Cloud Storage</td>
+            </tr>
+            
+            <tr>
+                <td data-label="Feature">Support</td>
+                <td data-label="Basic">Email Support</td>
+                <td data-label="Pro" class="plan-pro">Priority Email Support</td>
+                <td data-label="Enterprise">24/7 Phone & Email Support</td>
+            </tr>
+            <tr>
+                <td data-label="Feature">Advanced Analytics</td>
+                <td data-label="Basic">-</td>
+                <td data-label="Pro" class="plan-pro"><span class="feature-check">✔</span></td>
+                <td data-label="Enterprise"><span class="feature-check">✔</span></td>
+            </tr>
+           
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
