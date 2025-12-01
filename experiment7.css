@@ -1,0 +1,51 @@
+.box{
+    text-decoration-color: black;
+    height: auto;
+    width: auto;
+    border: 2px solid grey;
+    padding: 2%;
+}
+
+.container{
+    background-color: lightblue;
+    padding: 5px;
+    border: solid;
+    border-color: lightblue;
+    height: 150%;
+    width: 4%;
+    text-align: center;
+    margin-top: 2%;
+}
+.cont{
+    background-color: lightblue;
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    margin: 10px;
+    
+    width: 5%;
+    height: 5%;
+    
+}
+.con{
+    max-width: 420px;margin: 0 auto;
+}
+.head{
+    text-align: center;
+    background-color: grey;
+    border: 2px solid grey;
+    margin: top ;
+}
+.red{
+    color: red;
+}
+.blue{
+    background-color: lightblue;
+    border: 1px solid lightblue;
+    padding: 5px 10px;
+    text-decoration: none;
+    height: auto;
+    width: auto;
+    
+}
