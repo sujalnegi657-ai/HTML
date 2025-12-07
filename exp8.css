@@ -1,0 +1,13 @@
+.container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    border:20px solid black;
+}
+.items{
+    width: 100px;
+    height: 10px;
+    border-radius: 20px;
+    background-color: blue;
+    bakground
+}
